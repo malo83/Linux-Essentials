@@ -1,14 +1,17 @@
-____________________________________________________________________________________
-____________________________________________________________________________________
+---
+---
 
-WHAT IS LINUX AND WHAT IS A DISTRO ?
+## WHAT IS LINUX AND WHAT IS A DISTRO ?
 
 Linux is a kernel
+
 Where Linux live ?
-      - run on	- PC(desktop, server, laptop)
-		- embedded (kindle, android mobile phone)
-		- Raspberry Pi
-		- Cloud (Underneath, Instances, Services)
+
+Run on	
+- PC(desktop, server, laptop)
+- embedded (kindle, android mobile phone)
+- Raspberry Pi
+- Cloud (Underneath, Instances, Services)
 
 Linux kernel:
 	- Debian based:	- Ubuntu (and variants)
@@ -24,11 +27,10 @@ Linux kernel:
 			- SUSE
 			- Android
 			- Embedded systems
+---
+---
 
-____________________________________________________________________________________
-____________________________________________________________________________________
-
-WHAT APPLICATION WORK IN LINUX ?
+## WHAT APPLICATION WORK IN LINUX ?
 
 Can install many applications
 A lot of server application: MySQL, Apache...
@@ -47,10 +49,10 @@ Languages:	- C
 
 Easy and free to install applications on Linux.
 
-____________________________________________________________________________________
-____________________________________________________________________________________
+---
+---
 
-DON'T FEAR OPEN SOURCE LICENSING...
+## DON'T FEAR OPEN SOURCE LICENSING...
 
 Open source is freedom to: 	- Use code
 				- Share code
