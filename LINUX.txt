@@ -10,9 +10,6 @@ Where Linux live ?
 		- Raspberry Pi
 		- Cloud (Underneath, Instances, Services)
 
-____________________________________________________________________________________
-____________________________________________________________________________________
-
 Linux kernel:
 	- Debian based:	- Ubuntu (and variants)
 			- any ".deb" based systems
@@ -33,3 +30,22 @@ ________________________________________________________________________________
 
 WHAT APPLICATION WORK IN LINUX ?
 
+Can install many applications
+A lot of server application: MySQL, Apache...
+
+Languages:	- C
+		- C++
+		- Java
+		- Javascript
+		- PERL
+		- BASH
+		- Python
+		- PHP
+		- Rust
+		- Golang
+		- most of the programming language are available on Linux
+
+Easy and free to install applications on Linux.
+
+____________________________________________________________________________________
+____________________________________________________________________________________
