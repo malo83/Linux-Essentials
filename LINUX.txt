@@ -49,3 +49,15 @@ Easy and free to install applications on Linux.
 
 ____________________________________________________________________________________
 ____________________________________________________________________________________
+
+DON'T FEAR OPEN SOURCE LICENSING...
+
+Open source is freedom to: 	- Use code
+				- Share code
+				- Modify code
+
+Open source are Copyleft (can you something), which is the inverse of Copyright (can't use something)
+
+FLOSS: Free/Libre and Open Source Software
+FOSS: Free and Open Source Software
+They're basicaly the same, use FLOSS
