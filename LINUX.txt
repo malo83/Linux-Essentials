@@ -1,0 +1,35 @@
+____________________________________________________________________________________
+____________________________________________________________________________________
+
+WHAT IS LINUX AND WHAT IS A DISTRO ?
+
+Linux is a kernel
+Where Linux live ?
+      - run on	- PC(desktop, server, laptop)
+		- embedded (kindle, android mobile phone)
+		- Raspberry Pi
+		- Cloud (Underneath, Instances, Services)
+
+____________________________________________________________________________________
+____________________________________________________________________________________
+
+Linux kernel:
+	- Debian based:	- Ubuntu (and variants)
+			- any ".deb" based systems
+
+	- RedHat based:	- RHEL (RedHat Enterprise Linux)
+			- Fedora
+			- Cent OS
+			- "RPM" based systems
+
+	- Other:	- Arch
+			- Slackware
+			- SUSE
+			- Android
+			- Embedded systems
+
+____________________________________________________________________________________
+____________________________________________________________________________________
+
+WHAT APPLICATION WORK IN LINUX ?
+
