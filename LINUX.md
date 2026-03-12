@@ -127,5 +127,5 @@ For some licenses that are creative commons, you could :
 - Paid content: like youtube
 
 ## Doing Things with Linux
-[Doing Things with Linux](https://www.youtube.com/watch?v=ou9stJYm4j0&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=5)
+[Doing Things with Linux](https://www.youtube.com/watch?v=ou9stJYm4j0&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=6)
 
