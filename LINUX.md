@@ -48,7 +48,7 @@ We can install many applications on a Linux machine, and a lot of server applica
 - Golang
 - most of the programming language are available on Linux
 
-It's easy and free to install applications on Linux.
+It's easy and free to install most of the applications on Linux.
 
 ## DON'T FEAR OPEN SOURCE LICENSING...
 
@@ -61,4 +61,5 @@ Open source are Copyleft (can you something), which is the inverse of Copyright 
 
 FLOSS: Free/Libre and Open Source Software
 FOSS: Free and Open Source Software
-They're basicaly the same, use FLOSS
+They're basicaly the same, use FLOSS, it's most clear.
+
