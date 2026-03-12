@@ -64,7 +64,46 @@ Open source is freedom to:
 
 Open source are Copyleft (can you something), which is the inverse of Copyright (can't use something)
 
-FLOSS: Free/Libre and Open Source Software
+FLOSS: Free/Libre and Open Source Software  
 FOSS: Free and Open Source Software
+
 They're basicaly the same, use FLOSS, it's most clear.
+
+FSE: Free Softwate Fundation
+- Original (old one)
+- GNU
+
+OSI: Open Source Initiative
+- More buisness friendly
+- Allows more licenses
+
+FSE and OSI are basicaly the same.
+
+#### Permissive:
+Anybody can take the source code and use it for whatever they want, they can:
+- Wrap it inside ther own little program and they don't need to share the source code
+- Sell the program that they made for money
+
+Type of permissive licenses:
+- MIT
+- BSD
+- Apache
+
+#### Copyleft:
+You can use the source code but you have to give away and made available any of the source code that you write that includes the open source that you're using.
+
+Type of restrictive licenses:
+- GPL 2
+- GPL 3
+- AGPL 3
+
+#### Between permissive and restrictive liscence:
+- MPL2.0
+- LGPL 3
+
+![picture of the graph "Permissive to Copyleft"]()
+
+#### Conclusion:
+It's extremely important to know what specific license a piece of open source that you use is licenses uder.  
+If it DOESN'T have any license attached to it, it's copyrighted.
 
