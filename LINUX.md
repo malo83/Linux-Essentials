@@ -1,3 +1,5 @@
+## Introduction
+
 [Linux Essentials - the MOST Important Certificate](https://www.youtube.com/watch?v=skTShEHyXfo&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=1)
 
 ## WHAT IS LINUX AND WHAT IS A DISTRO ?
@@ -106,4 +108,21 @@ Type of restrictive licenses:
 #### Conclusion:
 It's extremely important to know what specific license a piece of open source that you use is licenses uder.  
 If it DOESN'T have any license attached to it, it's copyrighted.
+
+There is over 200 different open source licenses.
+
+### NON-Software ?
+
+Photos, musics, videos... can be licensed under CREATIVE COMMONS which is an open sort of license for this type of things.
+
+For some licenses that are creative commons, you could :
+- have to attribute who originally made the photo, music or video
+- can't use it if you're going to sell it
+- can use it but can't modify it
+
+### Buisness model
+
+- Paid support model (Original way)
+- Pro Features model: not release all features
+- Paid content: like youtube
 
