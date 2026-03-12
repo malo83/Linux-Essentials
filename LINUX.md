@@ -1,62 +1,61 @@
----
----
-
 ## WHAT IS LINUX AND WHAT IS A DISTRO ?
 
-Linux is a kernel
+Windows and MacOS are OS, but in Linux there is two different things:
+- the kernel, which is Linux. Basicaly the OS heart.
+- the distribution (or distro), which is basicaly the GUI.
 
-Where Linux live ?
+#### Where Linux live ?
 
-Run on	
+Linux run on a multitudes of machines:
 - PC(desktop, server, laptop)
 - embedded (kindle, android mobile phone)
 - Raspberry Pi
 - Cloud (Underneath, Instances, Services)
-
-Linux kernel:
-	- Debian based:	- Ubuntu (and variants)
-			- any ".deb" based systems
-
-	- RedHat based:	- RHEL (RedHat Enterprise Linux)
-			- Fedora
-			- Cent OS
-			- "RPM" based systems
-
-	- Other:	- Arch
-			- Slackware
-			- SUSE
-			- Android
-			- Embedded systems
 ---
----
+### There is a lot of different distributions in Linux:
+
+#### Debian based:
+- Ubuntu (and variants)
+- any ".deb" based systems
+
+#### RedHat based:
+- RHEL (RedHat Enterprise Linux)
+- Fedora
+- Cent OS
+- "RPM" based systems
+
+#### Other:
+- Arch
+- Slackware
+- SUSE
+- Android
+- Embedded systems
 
 ## WHAT APPLICATION WORK IN LINUX ?
 
-Can install many applications
-A lot of server application: MySQL, Apache...
+We can install many applications on a Linux machine, and a lot of server application like MySQL, Apache...
 
-Languages:	- C
-		- C++
-		- Java
-		- Javascript
-		- PERL
-		- BASH
-		- Python
-		- PHP
-		- Rust
-		- Golang
-		- most of the programming language are available on Linux
+### There is also a lot of languages available on Linux:
+- C
+- C++
+- Java
+- Javascript
+- PERL
+- BASH
+- Python
+- PHP
+- Rust
+- Golang
+- most of the programming language are available on Linux
 
-Easy and free to install applications on Linux.
-
----
----
+It's easy and free to install applications on Linux.
 
 ## DON'T FEAR OPEN SOURCE LICENSING...
 
-Open source is freedom to: 	- Use code
-				- Share code
-				- Modify code
+Open source is freedom to: 
+- Use code
+- Share code
+- Modify code
 
 Open source are Copyleft (can you something), which is the inverse of Copyright (can't use something)
 
