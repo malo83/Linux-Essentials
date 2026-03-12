@@ -1,4 +1,7 @@
+[Linux Essentials - the MOST Important Certificate](https://www.youtube.com/watch?v=skTShEHyXfo&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=1)
+
 ## WHAT IS LINUX AND WHAT IS A DISTRO ?
+[WHAT IS LINUX AND WHAT IS A DISTRO ?](https://www.youtube.com/watch?v=meAGfhD3_ww&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=2)
 
 Windows and MacOS are OS, but in Linux there is two different things:
 - the kernel, which is Linux. Basicaly the OS heart.
@@ -32,6 +35,7 @@ Linux run on a multitudes of machines:
 - Embedded systems
 
 ## WHAT APPLICATION WORK IN LINUX ?
+[WHAT APPLICATION WORK IN LINUX ?](https://www.youtube.com/watch?v=LH0FhfuQado&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=3)
 
 We can install many applications on a Linux machine, and a lot of server application like MySQL, Apache...
 
@@ -51,6 +55,7 @@ We can install many applications on a Linux machine, and a lot of server applica
 It's easy and free to install most of the applications on Linux.
 
 ## DON'T FEAR OPEN SOURCE LICENSING...
+[DON'T FEAR OPEN SOURCE LICENSING...](https://www.youtube.com/watch?v=x_U9Rkc3TmI&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=4)
 
 Open source is freedom to: 
 - Use code
