@@ -101,7 +101,7 @@ Type of restrictive licenses:
 - MPL2.0
 - LGPL 3
 
-![picture of the graph "Permissive to Copyleft"]()
+![picture of the graph "Permissive to Copyleft"](image1.png)
 
 #### Conclusion:
 It's extremely important to know what specific license a piece of open source that you use is licenses uder.  
