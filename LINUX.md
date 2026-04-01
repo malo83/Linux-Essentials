@@ -129,3 +129,44 @@ For some licenses that are creative commons, you could :
 ## Doing Things with Linux
 [Doing Things with Linux](https://www.youtube.com/watch?v=ou9stJYm4j0&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=6)
 
+## DESTROY Command Line Paralysis: Master Simple CLI Tools
+[DESTROY Command Line Paralysis: Master Simple CLI Tools](https://www.youtube.com/watch?v=UuJuq5wubaU&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=8)
+
+#### LINUX IS CASE SENSITIVE !
+
+### Navigating in files systeme
+
+#### Get the files and folders in your directory:
+
+You can combine parameters (ie. -al or -la)
+
+- base: ls
+- all files (hidden files too): ls -a
+- detailed list: ls -l
+    - if the line start with a "d": directory
+- recursive listing: -R
+- get list of a certain folder: ls (-a -l ...) "foldername"
+    - works with editing too
+- search name: ls \*"searchname"\*
+    - \* is used to say "anything here"
+
+#### Change Directory:
+- classic: cd "target directory"
+- parent directory: cd ..
+- home directory: cd ~    or cd
+  
+Folder "." : current directory  
+Folder "..": parent directory
+
+#### Get absolute path of the current directory: pwd
+
+#### Edit files and directories
+- remove file: rm "filename"
+    - can also remove folder if recursive: rm -R "foldername"
+- create empty file: touch "filename"
+- remove folder: rmdir "foldername"
+    - can only remove EMPTY directory
+- create folder: mkdir "foldername"
+- copy file: cp "filename" "new filename"
+- move file: mv "filename" "foldername destination"
+- rename file: mv "filename" "new filename"
