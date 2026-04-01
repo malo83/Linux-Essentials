@@ -170,3 +170,18 @@ Folder "..": parent directory
 - copy file: cp "filename" "new filename"
 - move file: mv "filename" "foldername destination"
 - rename file: mv "filename" "new filename"
+
+## You NEED to Know The Linux CLI!
+[You NEED to Know The Linux CLI!](https://www.youtube.com/watch?v=N-qRMeXkDIw&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=7)
+
+cmd in Linux is in bash (Born Against SHell)
+
+#### Get all commands: ls /bin
+
+- What type is an commande/name: type "commande/name"
+    - (ie. type ls will explain what did ls mean)
+- where did the commaande come from: which "command"
+    - (ie. which ls: /usr/bin/ls)
+- show all variables set in a bash terminal
+    - one of this varibles is PATH
+        - a commande is executed only if it is in the PATH
