@@ -220,3 +220,68 @@ cmd in Linux is in bash (Born Against SHell)
 - not a command
 - "cmd" manpage
 
+## Linux Does So Much More than ZIP!
+[Linux Does So Much More than ZIP!](https://www.youtube.com/watch?v=2cPRvL0TOjE&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=9)
+
+#### Create a tar file
+- tar files are archives files
+- cmd: tar -c -f archive.tar A_Folder_of_Stuff/
+    - tar commande name and the type of the file
+    - -c is for create
+    - -f for the name of the created file
+    - archive.tar is the filename
+    - A_Folder_of_Stuff/ is the content we want to put in the tar file
+
+#### Extract from a tar file
+- tar -x -f archive.tar
+    - -x mean extract
+
+![Compression table](image2.png)
+
+#### First ligne/first column is: Compress
+
+### Compress on Linux
+
+#### gzip
+- (Good Zip)
+- "gzip -k archive.tar"
+- -k means keep the original, don't delete the non-compressed file
+
+#### bzip2
+- (Better Zip)
+- "bzip2 -k archive.tar"
+#### xz
+- (Extra good Zip)
+- "xz -k archive.tar"
+
+### Decompresss on Linux
+
+#### gzip
+- (Good Zip)
+- "gzip -d archive.tar.gz" or "gunzip archive.tar.gz"
+- -d means decompress
+- it delete the compressed file after
+
+#### bzip2
+- (Better Zip)
+- "bzip2 -d archive.tar.bz2" or "bunzip2 archive.tar.bz2"
+- it delete the compressed file after
+
+#### xz
+- (Extra good Zip)
+- "xz -d archive.tar.xz" or "unxz archive.tar.xz"
+- it delete the compressed file after
+
+
+### Use tar
+
+tar don't compress, it just call the others commands
+
+#### With gzip
+- "tar -c -z -f archive.tar.gz A_Folder_of_Stuff/" or "tar -c -z -f archive.tgz A_Folder_of_Stuff/"
+
+#### With bzip2
+- "tar -c -j -f archive.tar.bz2 A_Folder_of_Stuff/" or "tar -c -j -f archive.tbz2 A_Folder_of_Stuff/"
+
+#### With xz
+- "tar -c -J -f archive.tar.xz A_Folder_of_Stuff/" or "tar -c -J -f archive.txz A_Folder_of_Stuff/"
