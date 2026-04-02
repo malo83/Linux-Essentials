@@ -178,10 +178,17 @@ cmd in Linux is in bash (Born Against SHell)
 
 #### Get all commands: ls /bin
 
-- What type is an commande/name: type "commande/name"
+- Get the type is an commande/name: type "commande/name"
     - (ie. type ls will explain what did ls mean)
 - where did the commaande come from: which "command"
     - (ie. which ls: /usr/bin/ls)
 - show all variables set in a bash terminal
     - one of this varibles is PATH
         - a commande is executed only if it is in the PATH
+- create new variable: "variable name"="variable content"
+    - (ie. THING=something)
+- use created variable: $"variable name"
+    - (ie. "echo $THING" will return "something")
+- import variables inside a new bash terminal: export "variable name"
+- start a new bash terminal (inside another one): bash
+- exit a bash terminal: exit
