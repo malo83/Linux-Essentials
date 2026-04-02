@@ -178,17 +178,45 @@ cmd in Linux is in bash (Born Against SHell)
 
 #### Get all commands: ls /bin
 
-- Get the type is an commande/name: type "commande/name"
-    - (ie. type ls will explain what did ls mean)
-- where did the commaande come from: which "command"
-    - (ie. which ls: /usr/bin/ls)
-- show all variables set in a bash terminal
-    - one of this varibles is PATH
-        - a commande is executed only if it is in the PATH
-- create new variable: "variable name"="variable content"
-    - (ie. THING=something)
-- use created variable: $"variable name"
-    - (ie. "echo $THING" will return "something")
-- import variables inside a new bash terminal: export "variable name"
-- start a new bash terminal (inside another one): bash
-- exit a bash terminal: exit
+#### Get the type is an commande/name: type "commande/name"
+- (ie. type ls will explain what did ls mean)
+#### Where did the commaande come from: which "command"
+- (ie. which ls: /usr/bin/ls)
+#### Show all variables set in a bash terminal
+- one of this varibles is PATH
+    - a commande is executed only if it is in the PATH
+#### Create new variable: "variable name"="variable content"
+- (ie. THING=something)
+#### Use created variable: $"variable name"
+- (ie. "echo $THING" will return "something")
+#### Import variables inside a new bash terminal: export "variable name"
+#### Start a new bash terminal (inside another one): bash
+#### Exit a bash terminal: exit
+#### Get histrory: history
+- clear history: history -c
+
+## Need Linux Help? JUST ASK LINUX!
+[Need Linux Help? JUST ASK LINUX!](https://www.youtube.com/watch?v=tDfSbs7DhsM&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=8)
+
+### Way to get help:
+#### man pages (manual pages)
+- built in
+- informative
+- got replace by info
+- (ie. man "cmd")
+#### info
+- less common
+- newer than man
+    - look like man
+- (ie. info "cmd")
+#### less
+- for viewing files in /usr/share/doc
+- (ie. less "filename")
+#### -h
+- doesn't always work
+    - sometime: --help
+- (ie. '"cmd" --help' or '"cmd" -h)
+#### Google
+- not a command
+- "cmd" manpage
+
