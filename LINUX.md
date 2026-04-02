@@ -254,7 +254,7 @@ cmd in Linux is in bash (Born Against SHell)
 - (Extra good Zip)
 - "xz -k archive.tar"
 
-### Decompresss on Linux
+### Decompress on Linux
 
 #### gzip
 - (Good Zip)
@@ -273,15 +273,53 @@ cmd in Linux is in bash (Born Against SHell)
 - it delete the compressed file after
 
 
-### Use tar
+### Using tar (Compress and Decompress)
 
 tar don't compress, it just call the others commands
 
 #### With gzip
+##### Compress
 - "tar -c -z -f archive.tar.gz A_Folder_of_Stuff/" or "tar -c -z -f archive.tgz A_Folder_of_Stuff/"
+    - -c for create
+    - -z call gzip
+        - use gzip to compress the tar file
+
+##### Decompress
+- "tar -x -z archive.tgz"
+    - -x for extract
+    - -z call gzip
+        - use gzip to decompress the tar file
 
 #### With bzip2
-- "tar -c -j -f archive.tar.bz2 A_Folder_of_Stuff/" or "tar -c -j -f archive.tbz2 A_Folder_of_Stuff/"
+##### Compress
+- "tar -cjf archive.tar.bz2 A_Folder_of_Stuff/" or "tar -cjf archive.tbz A_Folder_of_Stuff/"
+    - can combine letters
+        - make sure f is the last one because it requires an argument (filename)
+    - -j call bzip2
+        - use bzip2 to compress the tar file
+
+##### Decompress
+- "tar -x -j archive.tgz"
+    - -j call bzip2
+        - use bzip2 to decompress the tar file
 
 #### With xz
+##### Compress
 - "tar -c -J -f archive.tar.xz A_Folder_of_Stuff/" or "tar -c -J -f archive.txz A_Folder_of_Stuff/"
+    - -J call xz to compress the tar file
+
+##### Decompress
+- "tar -x -J archive.txz"
+    - -J call xz
+        - use xz to decompress the tar file
+
+### Using Zip and Unzip
+
+#### Zip
+- "zip -R archive.zip A_Folder_of_Stuff/"
+    - -R for recursive
+        - needed, else it wil compress omly the folder and nothing inside it
+
+#### Unzip
+- "unzip archive.zip"
+
