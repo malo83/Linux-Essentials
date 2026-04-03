@@ -217,7 +217,7 @@ cmd in Linux is in bash (Born Against SHell)
     - sometime: --help
 - (ie. '"cmd" --help' or '"cmd" -h)
 #### Google
-- not a command
+- that's not a command, search on google (cannot during exams)
 - "cmd" manpage
 
 ## Linux Does So Much More than ZIP!
@@ -322,4 +322,7 @@ tar don't compress, it just call the others commands
 
 #### Unzip
 - "unzip archive.zip"
+
+## Linux PIPES and REDIRECTS: Command Line Ninja Skillz
+[Linux PIPES and REDIRECTS: Command Line Ninja Skillz](https://www.youtube.com/watch?v=Kdr0OrCPtyk&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=10)
 
