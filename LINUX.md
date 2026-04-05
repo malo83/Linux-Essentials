@@ -326,3 +326,57 @@ tar don't compress, it just call the others commands
 ## Linux PIPES and REDIRECTS: Command Line Ninja Skillz
 [Linux PIPES and REDIRECTS: Command Line Ninja Skillz](https://www.youtube.com/watch?v=Kdr0OrCPtyk&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=10)
 
+An application have:
+- a standart input (stdin)
+    - to send informations into application when you run it
+- a standar output (stdout)
+    - output of the application
+- a standar error (stderr)
+    - utput of all the errors of the application
+
+By default, stdout and stderr dump directly to the terminal, but can be redirected (ie. to a file).
+
+### Exemple
+
+#### echo "hello"
+- print "hello" in the terminal window
+- print the errors in the terminal window
+
+#### echo "hello" > output.txt
+- print "hello" in the file output.txt
+    - if no file found, create one
+- print the errors in the terminal window
+
+#### echo "hello" 2> error.txt
+- print "hello" in the terminal window
+- print the errors in the file error.txt
+    - if no file found, create one
+
+#### echo "hello" > output.txt 2>&1
+- print "hello" in the file output.txt
+- print the errors in the file output.txt
+
+#### echo "hello" >> output.txt
+- print "hello" in the file output.txt
+- print the errors in the terminal window
+- will extend the file output.txt
+    - will not errase the olders lines in the file
+
+#### Recap
+- 1 is the stdout
+- 2 is the stderr
+- "a \> b" will replace the file b by the stdout of a
+- "a 2\> b" will replace the file b by the stderr of a
+- "a >> b" will extend the file b with the stdout of a
+- "2>&1" will redirect the stderr into the stdout
+
+#### Read a file in the terminal window
+- cat output.txt | less
+    - cat is the command to read a file in the terminal
+    - output.txt is the filename
+    - | is used to change the stdin:
+        - "a | b"
+            - a is the stdin of b
+    - less is a commande to have a better view of a file in the terminal window
+- cat output.txt 2>&1 | less
+    - 2>&1 will assure that if we made a mistake like "ouptut.txt (which not exist)" it will print the error in the less command
