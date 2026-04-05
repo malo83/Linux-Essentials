@@ -380,3 +380,33 @@ By default, stdout and stderr dump directly to the terminal, but can be redirect
     - less is a commande to have a better view of a file in the terminal window
 - cat output.txt 2>&1 | less
     - 2>&1 will assure that if we made a mistake like "ouptut.txt (which not exist)" it will print the error in the less command
+
+## Linux RULES at Text Manipulation. [BONUS: Basic REGEX]
+[Linux RULES at Text Manipulation. [BONUS: Basic REGEX]](https://www.youtube.com/watch?v=OTUMj3byfCA&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=12)
+
+### Making multiple commands at the same time
+    command1; command2; command3 ...
+
+### Read just top or bottom of a file
+
+#### Top
+- head -n 5 file.csv
+    - head mean the top of the file
+    - -n is for a certain number of lines
+        - 5 is the number of lines
+    - file.csv is the filename
+
+#### Bottom
+- tail -n 3 file.csv
+    - tail mean bottom
+
+##### By default "head" and "tail" return 20 lines.
+
+- tail -n +2 file.csv
+    - +2 here mean that the command will return everything stsrting at the second line
+
+- sort file.csv
+    - will sort every lines alphabetically
+
+### Composition of commands
+    head -n 1 file.csv; tail -n +2 file.csv | sort
