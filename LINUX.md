@@ -226,15 +226,15 @@ cmd in Linux is in bash (Born Against SHell)
 #### Create a tar file
 - tar files are archives files
 - cmd: tar -c -f archive.tar A_Folder_of_Stuff/
-    - tar commande name and the type of the file
-    - -c is for create
-    - -f for the name of the created file
-    - archive.tar is the filename
-    - A_Folder_of_Stuff/ is the content we want to put in the tar file
+    - **tar** commande name and the type of the file
+    - **-c** is for create
+    - **-f** for the name of the created file
+    - **archive.tar** is the filename
+    - **A** _ **Folder** _ **of** _ **Stuff/** is the content we want to put in the tar file
 
 #### Extract from a tar file
 - tar -x -f archive.tar
-    - -x mean extract
+    - **-x** mean extract
 
 ![Compression table](image2.png)
 
@@ -245,7 +245,7 @@ cmd in Linux is in bash (Born Against SHell)
 #### gzip
 - (Good Zip)
 - "gzip -k archive.tar"
-- -k means keep the original, don't delete the non-compressed file
+- **-k** means keep the original, don't delete the non-compressed file
 
 #### bzip2
 - (Better Zip)
@@ -259,7 +259,7 @@ cmd in Linux is in bash (Born Against SHell)
 #### gzip
 - (Good Zip)
 - "gzip -d archive.tar.gz" or "gunzip archive.tar.gz"
-- -d means decompress
+- **-d** means decompress
 - it delete the compressed file after
 
 #### bzip2
@@ -280,14 +280,14 @@ tar don't compress, it just call the others commands
 #### With gzip
 ##### Compress
 - "tar -c -z -f archive.tar.gz A_Folder_of_Stuff/" or "tar -c -z -f archive.tgz A_Folder_of_Stuff/"
-    - -c for create
-    - -z call gzip
+    - **-c** for create
+    - **-z** call gzip
         - use gzip to compress the tar file
 
 ##### Decompress
 - "tar -x -z archive.tgz"
-    - -x for extract
-    - -z call gzip
+    - **-x** for extract
+    - **-z** call gzip
         - use gzip to decompress the tar file
 
 #### With bzip2
@@ -295,29 +295,29 @@ tar don't compress, it just call the others commands
 - "tar -cjf archive.tar.bz2 A_Folder_of_Stuff/" or "tar -cjf archive.tbz A_Folder_of_Stuff/"
     - can combine letters
         - make sure f is the last one because it requires an argument (filename)
-    - -j call bzip2
+    - **-j** call bzip2
         - use bzip2 to compress the tar file
 
 ##### Decompress
 - "tar -x -j archive.tgz"
-    - -j call bzip2
+    - **-j** call bzip2
         - use bzip2 to decompress the tar file
 
 #### With xz
 ##### Compress
 - "tar -c -J -f archive.tar.xz A_Folder_of_Stuff/" or "tar -c -J -f archive.txz A_Folder_of_Stuff/"
-    - -J call xz to compress the tar file
+    - **-J** call xz to compress the tar file
 
 ##### Decompress
 - "tar -x -J archive.txz"
-    - -J call xz
+    - **-J** call xz
         - use xz to decompress the tar file
 
 ### Using Zip and Unzip
 
 #### Zip
 - "zip -R archive.zip A_Folder_of_Stuff/"
-    - -R for recursive
+    - **-R** for recursive
         - needed, else it wil compress omly the folder and nothing inside it
 
 #### Unzip
@@ -363,23 +363,23 @@ By default, stdout and stderr dump directly to the terminal, but can be redirect
     - will not errase the olders lines in the file
 
 #### Recap
-- 1 is the stdout
-- 2 is the stderr
-- "a \> b" will replace the file b by the stdout of a
-- "a 2\> b" will replace the file b by the stderr of a
-- "a >> b" will extend the file b with the stdout of a
-- "2>&1" will redirect the stderr into the stdout
+- **1** is the stdout
+- **2** is the stderr
+- **a > b** will replace the file b by the stdout of a
+- **a 2> b** will replace the file b by the stderr of a
+- **a >> b** will extend the file b with the stdout of a
+- **2>&1** will redirect the stderr into the stdout
 
 #### Read a file in the terminal window
 - cat output.txt | less
-    - cat is the command to read a file in the terminal
-    - output.txt is the filename
-    - | is used to change the stdin:
+    - **cat** is the command to read a file in the terminal
+    - **output.txt** is the filename
+    - **|** is used to change the stdin:
         - "a | b"
             - a is the stdin of b
     - less is a commande to have a better view of a file in the terminal window
 - cat output.txt 2>&1 | less
-    - 2>&1 will assure that if we made a mistake like "ouptut.txt (which not exist)" it will print the error in the less command
+    - **2>&1** will assure that if we made a mistake like "ouptut.txt (which not exist)" it will print the error in the less command
 
 ## Linux RULES at Text Manipulation. [BONUS: Basic REGEX]
 [Linux RULES at Text Manipulation. [BONUS: Basic REGEX]](https://www.youtube.com/watch?v=OTUMj3byfCA&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=12)
@@ -391,22 +391,77 @@ By default, stdout and stderr dump directly to the terminal, but can be redirect
 
 #### Top
 - head -n 5 file.csv
-    - head mean the top of the file
-    - -n is for a certain number of lines
-        - 5 is the number of lines
-    - file.csv is the filename
+    - **head** mean the top of the file
+    - **-n** is for a certain number of lines
+        - **5** is the number of lines
+    - **file.csv** is the filename
 
 #### Bottom
 - tail -n 3 file.csv
-    - tail mean bottom
+    - **tail** mean bottom
 
-##### By default "head" and "tail" return 20 lines.
+##### By default "head" and "tail" return 10 lines.
 
 - tail -n +2 file.csv
-    - +2 here mean that the command will return everything stsrting at the second line
+    - **+2** here mean that the command will return everything starting at the second line
+
+- head -n -2 file.csv
+    - **-2** here mean that the command will return everything from the start to the end exept the last line
 
 - sort file.csv
     - will sort every lines alphabetically
 
 ### Composition of commands
     head -n 1 file.csv; tail -n +2 file.csv | sort
+- head -n 1 file.csv
+    - return the first line
+- tail -n +2 file.csv | sort
+    - return everything exept the first line and sort it
+    - we can add **-r** after **sort** toreverse the sorting
+
+### cut function
+    cut -c 1-3 file.csv
+- **cut** will cut each line of the file **file.csv**
+- **-c** is the **cut** parameters and it's for a character cut
+- **1-3** mean that it will cut the characters from the first one to the third one of each lines
+- **file.csv** is the filename
+
+#### cut -d, -f 2 file.csv
+- **-d,** mean it will use the comma as a delimiter
+- **-f** is for what field we want
+- **2** is the field number that we want
+- the command will return the field between  the first and the second comma of each line
+
+### Grep command
+    grep "red" file.csv
+- **grep** is a coomand that return each line that contain a certain sentence
+- **"red"** is the searched sentence
+- **file.csv** is the filename
+
+#### grep is case sensitive
+- **-i** delete the case sensitivity of tf the grep command
+    - (ie. **grep -i "RED" file.csv**)
+
+#### grep "ap[pe]" file.csv
+- mean that it will return everything is the brackets:
+    - **app** or **ape**
+
+#### grep ".ap" file.csv
+- the dot mean every characters
+    - (ie. rap, sap, jap, aap ...)
+    - it has to be a character#
+        - (ie. not just ap or ,ap ...)
+
+#### grep "ap*l" file.csv
+- the star mean that the previous character can be multiple time or none
+    - (ie. appl, al, apl, appppppl ...)
+
+#### grep -E "el?o" file.csv
+- **-E** is for edge
+- **?** mean that the previous character has to existe 0 or 1 time
+    - (ie. elo or eo, but not ello)
+
+#### wc -l file.csv
+- **wc** mean words count
+- **-l** is for the number of lines
+- (ie. **grep "red" file.csv | wc -l**)
