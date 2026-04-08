@@ -516,3 +516,53 @@ If the exit status is 0, it means that the command was well executed.
     - return the exit status of the previous command
     - **$?** is the exit status of the previous command
 
+## Picking the BEST Operating System for Linux Pros
+[Picking the BEST Operating System for Linux Pros](https://www.youtube.com/watch?v=kp4P7LfSqMM&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=13)
+
+### Microsoft Windows
+- Expensive
+- Lifecycle not standard
+    - usually easy to migrate
+- Becoming more Linux-like
+- Best for gaming
+
+### Apple MacOS
+- Unix based
+    - mean the terminal is a real terminal
+    - sorta
+- Free, but only on Apple hardware
+- Regular releases
+
+### Linux (Multiple distributions)
+- Kernel regulary updated
+    - distros (distributions) handle differently
+- Rolling release (debian)
+    - constantly keep updating the software
+- Long term support (RedHat and Ubuntu LTS)
+
+#### RedHat
+- Fully supported and updated for 5 years
+- Maintained for 5 more years
+    - make only security opdate on the last version
+- You can pay to get 2 years more of maintenance support
+
+![RedHat Life Cycle](image3.png)
+![RedHat release](image4.png)
+
+In redHat you can use for free their beta softwares.
+
+#### Ubuntu
+- Fully supported and updated for 5 years
+- Can pay for 5 more years of support
+- New version every 2 years
+
+![Ubuntu release](image5.png)
+
+#### Linux Server
+- Usually doesn't have a GUI
+- Usually stable version of OS
+
+#### Linux Desktop
+- Usually has a GUI
+- Often updated more regulary
+
