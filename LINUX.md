@@ -174,7 +174,7 @@ Folder "..": parent directory
 ## You NEED to Know The Linux CLI!
 [You NEED to Know The Linux CLI!](https://www.youtube.com/watch?v=N-qRMeXkDIw&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=7)
 
-cmd in Linux is in bash (Born Against SHell)
+cmd in Linux is in bash (Bourne Again SHell)
 
 #### Get all commands: ls /bin
 
@@ -434,7 +434,7 @@ By default, stdout and stderr dump directly to the terminal, but can be redirect
 
 ### Grep command
     grep "red" file.csv
-- **grep** is a coomand that return each line that contain a certain sentence
+- **grep** is a command that return each line that contain a certain sentence
 - **"red"** is the searched sentence
 - **file.csv** is the filename
 
@@ -465,3 +465,54 @@ By default, stdout and stderr dump directly to the terminal, but can be redirect
 - **wc** mean words count
 - **-l** is for the number of lines
 - (ie. **grep "red" file.csv | wc -l**)
+
+## How to Write Simple Shell Scripts!
+[How to Write Simple Shell Scripts!](https://www.youtube.com/watch?v=usyzSMFfUTg&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=12)
+
+Multiple differents editors: VI, VIM, NANO...
+
+### VI
+    vi file.sh
+- very powerfull
+- in every Linux systems
+- complicated
+    - a lot of shortcut to know
+
+### Nano
+    nano file.sh
+- in almost every Linux systems
+- very user friendly
+
+### Editors principles
+
+- **#**
+    - add a comment
+- **#!/bin/bash**
+    - first line of a script
+    - tell Linux to use bin/bash to execute this program
+
+#### Variable
+- **VariableName="VariableContent"**
+    - make a variable
+- **$VariableName**
+    - use a variable
+- **$1**
+    - turn the first argument into a variable
+        - (ie. **./script.sh argument1**)
+    - can make multiple arguments
+        - (ie. **$1 $2** ...)
+            - (ie. **./script.sh argument1 argument2**)
+
+#### For loop
+    for X in 1 2 3 4 5
+    do
+        echo $X
+    done
+
+#### Exit status
+If the exit status is 0, it means that the command was well executed.
+
+- **echo $?**
+    - return the exit status of the previous command
+    - **$?** is the exit status of the previous command
+
