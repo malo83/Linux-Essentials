@@ -566,3 +566,117 @@ In redHat you can use for free their beta softwares.
 - Usually has a GUI
 - Often updated more regulary
 
+## Identifying (FILTHY) Hardware in a Linux System!
+[Identifying (FILTHY) Hardware in a Linux System!](https://www.youtube.com/watch?v=9VH-L0Q9J1M&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=14)
+
+Hardware of the computer
+
+### NVME drive
+    ls nvm*
+- see our nvme drive
+- will return:
+    - nvme0
+        - nvme bus
+    - nvme0n1
+        - is the first nvme drive
+    - nvme0n1p1
+        - is the first partition of the drive number 1
+    - nvme0n1p2
+        - is the second partition of the drive number 1
+
+### SSD drive
+    ls sd*
+- see ourt ssd drive
+- will return:
+    - sda
+        - first ssd drive
+    - sda1
+        - first partition on the first ssd drive
+    - sda2
+        - second partition on the first ssd drive
+
+### Different drives
+- HDD
+    - Hard Disk Drive
+    - old one
+    - mechanic
+    - slow
+    - cheaper
+
+- SSD
+    - Solid State Drive
+    - new one
+    - flash drive (like sd card)
+    - fast
+    - more expensive
+
+### Interface/ Connection
+**HIGHWAY** for data tranfer.  
+How does the data are transmited between the SSD and the Motherboard.  
+His **connection type**.
+
+- SATA
+    - Serial AT Attachment
+    - old one
+    - make for hdd
+    - slow for ssd
+    - use cable
+    - used by:
+        - HDD
+        - SSD SATA
+
+- PCIe
+    - Peripheral Component Interconnect Express
+    - new one
+    - fast
+    - used by:
+        - GPU
+        - SSD NVMe
+
+- USB
+    - External SSD
+
+### Protocol
+**TRAFFIC RULES** for the highway (interface).  
+How does the drive and the motherboard communicate.
+
+- AHCI
+    - Advanced Host Controller Interface
+    - old one
+    - made for HDD
+    - slow
+    - used by:
+        - HDD
+        - SSD SATA
+        - SSD M.2 SATA
+
+- NVMe
+    - Non-Volatile Memory Express
+    - made for:
+        - SSD
+        - PCIe
+        - not for SATA
+    - fast
+    - M.2 slot on motherboard
+    
+### Format/ Slot
+How does the SSD/HDD look like.  
+His **physical form**.
+
+- M.2 slot
+    - on the motherboard
+    - flat on the motherboard
+    - (ie. nvme drive)
+    - used by:
+        - SATA
+        - NVMe
+
+- PCIe card
+    - on the motherboard
+    - perpendicular to the motherboard
+    - (ie. GPU, sound card...)
+
+- U.2
+    - server disk
+    - NVMe
+
