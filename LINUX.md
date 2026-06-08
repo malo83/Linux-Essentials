@@ -845,6 +845,7 @@ free
 free -h
 ```
 - **-h** mean: human readable
+    - make it more readable
 
 ```
 ps
@@ -863,4 +864,333 @@ top
     - memory usage
     - CPU usage
     - all the running process on the system sort by CPU usage
-        - can change the sorting column with: < or >
+        - can change the sorting column with: **<** or **>**
+    - process ID (PID)
+
+## Virtual Filesystems
+
+### /dev /sda
+- device nodes
+- user-space access to hardware
+
+### /proc
+- running process info
+    - pid
+- lot of other kernel stuff
+
+### /sys
+- should be other kernel stuff...
+
+## Physical filesystems
+
+### /bin
+Needed for system rescue.
+
+### /usr/bin
+Most programs.
+
+### /sbin and usr/sbin
+System config tools.
+
+### /usr/share/bin
+Programs for other apps, like stuff apache might use.
+
+## Symbolic links
+
+### /boot
+Where Kernel files live.
+
+### /etc
+Configuration files.
+
+### /var/log
+Log files.  
+
+- `tail syslog files` to get the lasts logs in /var/log except the kernel logs  
+- `dmesg` to get the kernel logs
+
+### /usr/local/bin or /usr/local/ect or /usr/local/var...
+Locally compiled programs.
+
+# Linux, Networking, and the ENTIRE INTERNET (in one video... sorta)
+[Linux, Networking, and the ENTIRE INTERNET (in one video... sorta)](https://www.youtube.com/watch?v=9rFF5RlB18U&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=16)
+
+![Internet cloud](image6.png)
+
+Router in the house have 2 connections:
+- internal one: (mostly 192.168.1.1)
+- ouside one: 1.2.3.4 (each number from 0 to 255)
+
+Each house only need ONE IP adress.
+
+There is no enough IPv4 (i.e.: 142.251.38.110) for everybody on earth so we made IPv6 (i.e.: 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+## Find IP adress on Linux system
+
+### OLD WAY
+
+- ifconfig
+    - get IP adress
+    - lo: localhost (mean "ME")
+    - inet : IPv4
+    - inet6 : IPV6
+- route
+    - get route: the local network
+    - 
+- netstat -tuna
+    - all information about our PC is listening for things on the network
+
+### NEW WAY
+
+- ip adress show (ip a)
+    - get IP adress
+- ip route show (ip route)
+    - get route: the local network
+- ss -tuna
+    - all information about our PC is listening for things on the network
+
+## DNS
+
+Domain Name Server (or Service)
+
+```
+cat /etc/hosts
+```
+- to see and can add new DNS 
+
+# Phenomenal LINUX Powers! (Teeny Little Command Line Magic)
+
+[Phenomenal LINUX Powers! (Teeny Little Command Line Magic)](https://www.youtube.com/watch?v=NXsKWxs53pA&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=17)
+
+## There is 3 type of Linux user
+
+### Regular Users
+
+- People
+- /home/username
+- You and me
+- UID(UserID)/ GID(GroupID) start with 500 or 1000 usually
+
+### System Users
+
+- programs
+- apache, etc.
+- home dir can be anything
+
+### Root users
+
+- Super user
+- UID (RootID of 0, it is the first user on a computer)
+- home dir /root/
+- bad practice to use as regular user
+
+## Escalate privilage
+
+### SU
+
+- Become another user
+- by default, root
+- Needs ROOT password
+    - in ubuntu you don't know the ROOT password
+
+### sudo
+
+- do thing as different user
+- root by default
+- need USER's password
+
+## UID
+
+- User ID
+- USed in permissions
+    - attached to files
+
+## GID
+
+- Group ID
+- useful for sharing files and directories
+
+# Creating Linux Users is (TOO?) Easy!
+
+[Creating Linux Users is (TOO?) Easy!](https://www.youtube.com/watch?v=Y6iE89SbiHg&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=18)
+
+## Create a new user
+
+```
+sudo useradd -d /home/suzy -m -G sudo,adm suzy
+```
+- `sudo`: to be root
+- `useradd`: cmd to add a new user
+- `-d` to choose the home directory
+    - `/home/suzy`: the home directory
+- `-m`: create the user home directory
+- `-G`: add the user to a group
+    - `sudo`: group sudo: to make the user an admin
+    - `adm`: a group name
+- `suzy`: the user name
+
+## Create a new group
+
+```
+sudo groupadd coolpeople
+```
+- `sudo`: to be root
+- `groupadd`: to make a new group
+    - `coolpeople`: name of the group
+
+## Add people to a new group
+
+```
+sudo usermod -G coolpeople -a suzy
+```
+- `sudo`: to be root
+- `usermod`: to add a user to a new group
+- `-G`: choosed group
+    - `coolpeople`: group name
+- `-a`: append the user to the choosed group wthout removing it from his others group
+- `suzy`: username
+
+## Delete user
+
+```
+sudo userdel -rf suzy
+```
+- `sudo`: to be root
+- `userdel`: to delete the user
+- `-r`: remove home dir and mail spool
+- `-f`: force remove
+- `suzy`: username
+
+## Add a file in a home dir for a new user when creating it
+
+```
+cd /etc/skel
+sudo touch COOL_FILE_FOR_COOL_PEOPLE
+cd
+sudo useradd -d /home/suzy -m -G sudo,adm,coolpeople suzy
+```
+- `cd /etc/skel`: go the the /etc/skel directory
+- `sudo touch COOL_FILE_FOR_COOL_PEOPLE`: create new empty file
+- `cd`: return in home dir
+- `sudo useradd -d /home/suzy -m -G sudo,adm,coolpeople suzy`: create new user named suzy in groups: sudo,adm and coolpeople
+
+Now if we do `sudo ls /home/suzy` (`sudo` because we don't have the permission) we can see the file: `COOL_FILE_FOR_COOL_PEOPLE`
+
+## Add a password to a new user or change a user's password
+
+### Change your own password
+```
+passwd
+```
+### Add or change other user's password
+```
+sudo passwd suzy
+```
+To change or add suzy's password.
+
+## Change user
+```
+ssh suzy@localhost
+```
+To connect to user suzy.
+
+# Let's Manipulate Permissions and Ownership!
+
+[Let's Manipulate Permissions and Ownership!](https://www.youtube.com/watch?v=ghWrHwU2e_4&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=19)
+
+![ls -s](image7.png)
+
+First field is a `-` or a `d` for a directory.
+The user, group, and other fields are composed of 3 things:
+- each one can be `rwx` or each lettre can be change by a `-`.
+    - `r` is for read access
+    - `w` is for write access
+    - `x` is an executable file
+        - if it's a directory: means can `cd` into it
+
+- first group is for user permissions,
+- second group is for group permission and
+- other is for everybody else on the system that is not the user or the group assigned to that file.
+
+## Change the permissions
+```
+chmod ugo+x thing
+```
+- `chmod`: to change the permissions
+- `ugo+x`
+    - `u`: change user permission
+    - `g`: change group permission
+    - `o`: change other permission
+    - `+x`: add x permission (execute) to the selected user/group/other
+- `thing`: filename that you want to change permission of
+
+#### Example:
+```
+chmod ug-x, o+rwx thing2
+```
+- `chmod`: to change the permissions
+- `ug-x`
+    - `u`: change user permission
+    - `g`: change group permission
+    - `-x`: dismiss x permission (execute) to the selected user/group/other
+- `o+rwx`: add read, write and execute permission for other
+- `thing2`: filename that you want to change permission of
+
+## Change ownership of a file or directory
+### Change user ownership
+```
+sudo chown bob cat
+```
+- `chown`: change ownership of a file or a directory
+- `bob`: new owner
+- `cat`: filename
+
+### Change group ownership
+```
+sudo chown .suzy cat
+```
+Will only change the group ownership by using a `.name`.
+
+### Change user and group ownership
+```
+sudo chown suzy.suzy cat
+```
+Will change the user and the group ownership.
+
+# The STICKY BITs of Linux
+[The STICKY BITs of Linux](https://www.youtube.com/watch?v=XV50sj35Xns&list=PL78ppT-_wOmvlYSfyiLvkrsZTdQJ7A24L&index=20)
+
+## Create symbolic link
+```
+ln -s stuff samestuff
+```
+- `ln`: create link
+- `-s`: for symbolic
+- `stuff`: name of the file or folder
+- `samestuff`: name of the symbolic link
+
+Symbolic link is a pointer.
+
+## Sticky BITs
+
+It's a option that add special permissions to a folder, that allow everybody to use it, get access but cannot delete anything. Only the owner or a root user can delete or modify it.
+
+### Add the sticky BITs to a folder
+```
+chmod +t stuff
+```
+- `chmod`: to change the permissions
+- `+t`: add sticky BITs
+- `stuff`: name of the folder
+
+or
+```
+chmod 1777 stuff
+```
+- `chmod`: to change the permissions
+- `1777`
+    - `1`: activate the sticky BITs
+    - `777`: give all permission to everybody (drwxrwxrwx)
+- `stuff`: name of the folder
+
+To delete it: `-t` instead of `+t` or: `chmod 0777 stuff`.
